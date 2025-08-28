@@ -35,7 +35,9 @@ class SignupScreen extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const ShoppingScreen()),
+                  MaterialPageRoute(
+                    builder: (context) => const ShoppingScreen(),
+                  ),
                 );
               },
             ),
