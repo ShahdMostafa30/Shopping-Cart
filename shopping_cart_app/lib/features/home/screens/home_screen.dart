@@ -64,7 +64,7 @@ class HomeScreen extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const SignupScreen(),
+                          builder: (context) => SignupScreen(),
                         ),
                       );
                     },
@@ -84,7 +84,7 @@ class HomeScreen extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const LoginScreen(),
+                          builder: (context) => LoginScreen(),
                         ),
                       );
                     },
