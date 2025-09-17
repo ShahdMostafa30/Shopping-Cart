@@ -49,6 +49,7 @@ class SignupScreen extends StatelessWidget {
                 hint: 'Enter your password',
                 controller: pass,
                 validator: (pass) => Validations.validatePassword(pass),
+                obscureText: true,
               ),
               CustomTextField(
                 label: 'Confirm Password',
@@ -57,29 +58,30 @@ class SignupScreen extends StatelessWidget {
                 validator:
                     (confirmPass) =>
                         Validations.validateConfirmPass(confirmPass, pass.text),
+                obscureText: true,
               ),
               CustomButton(
                 text: 'Create Account',
                 onPressed: () async {
                   if (formKey.currentState!.validate()) {
                     await showDialog(
-                        context: context,
-                        builder:
-                            (context) => CustomSuccessDialog(
-                              title: 'Success!',
-                              subtitle: 'Account created successfully',
-                              buttonText: 'Close',
-                              onPressed: () {
-                                Navigator.of(context).pop();
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder:
-                                        (context) => const ShoppingScreen(),
-                                  ),
-                                );
-                              },
-                            ),);
+                      context: context,
+                      builder:
+                          (context) => CustomSuccessDialog(
+                            title: 'Success!',
+                            subtitle: 'Account created successfully',
+                            buttonText: 'Close',
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const ShoppingScreen(),
+                                ),
+                              );
+                            },
+                          ),
+                    );
                   }
                 },
               ),

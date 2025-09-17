@@ -25,7 +25,7 @@ class LoginScreen extends StatelessWidget {
                 SizedBox(height: 64),
                 Text(
                   'Welcome Back',
-                  style: TextStyle(fontSize: 32, color: Color(0xFF7454af)),
+                  style: TextStyle(fontSize: 32, color: Color(0xFF6a78e0)),
                 ),
                 SizedBox(height: 10),
                 Text(
@@ -43,6 +43,7 @@ class LoginScreen extends StatelessWidget {
                   hint: 'Enter your password',
                   controller: pass,
                   validator: (pass) => Validations.validatePassword(pass),
+                  obscureText: true,
                 ),
                 CustomButton(
                   text: 'Sign In',
