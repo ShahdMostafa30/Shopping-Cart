@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:shopping_cart_app/core/customs/custom_button.dart';
+import 'package:shopping_cart_app/core/customs/custom_success_dialog.dart';
 import 'package:shopping_cart_app/core/customs/custom_text_field.dart';
 import 'package:shopping_cart_app/core/validations/validations.dart';
-import 'package:shopping_cart_app/features/shopping/shopping_screen.dart';
+import 'package:shopping_cart_app/features/shopping/screens/shopping_screen.dart';
 
 class SignupScreen extends StatelessWidget {
   SignupScreen({super.key});
@@ -59,14 +60,26 @@ class SignupScreen extends StatelessWidget {
               ),
               CustomButton(
                 text: 'Create Account',
-                onPressed: () {
+                onPressed: () async {
                   if (formKey.currentState!.validate()) {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const ShoppingScreen(),
-                      ),
-                    );
+                    await showDialog(
+                        context: context,
+                        builder:
+                            (context) => CustomSuccessDialog(
+                              title: 'Success!',
+                              subtitle: 'Account created successfully',
+                              buttonText: 'Close',
+                              onPressed: () {
+                                Navigator.of(context).pop();
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder:
+                                        (context) => const ShoppingScreen(),
+                                  ),
+                                );
+                              },
+                            ),);
                   }
                 },
               ),

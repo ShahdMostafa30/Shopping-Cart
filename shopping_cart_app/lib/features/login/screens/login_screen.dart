@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:shopping_cart_app/core/customs/custom_button.dart';
+import 'package:shopping_cart_app/core/customs/custom_success_dialog.dart';
 import 'package:shopping_cart_app/core/customs/custom_text_field.dart';
 import 'package:shopping_cart_app/core/validations/validations.dart';
-import 'package:shopping_cart_app/features/shopping/shopping_screen.dart';
+import 'package:shopping_cart_app/features/shopping/screens/shopping_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   LoginScreen({super.key});
@@ -45,9 +46,21 @@ class LoginScreen extends StatelessWidget {
                 ),
                 CustomButton(
                   text: 'Sign In',
-                  onPressed: () {
+                  onPressed: () async {
                     if (formKey.currentState!.validate()) {
-                      Navigator.push(
+                      await showDialog(
+                        context: context,
+                        builder:
+                            (context) => CustomSuccessDialog(
+                              title: 'Welcome!',
+                              subtitle: 'Account sign-in successfully',
+                              buttonText: 'Close',
+                              onPressed: () {
+                                Navigator.of(context).pop();
+                              },
+                            ),
+                      );
+                      Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
                           builder: (context) => const ShoppingScreen(),

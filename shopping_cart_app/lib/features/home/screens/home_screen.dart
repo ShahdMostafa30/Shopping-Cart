@@ -46,7 +46,7 @@ class HomeScreen extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(16),
-                    child: Image.asset('assets/login.jpg'),
+                    child: Image.asset('assets/images/login.jpg'),
                   ),
                 ),
               ),
@@ -63,9 +63,7 @@ class HomeScreen extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(
-                          builder: (context) => SignupScreen(),
-                        ),
+                        MaterialPageRoute(builder: (context) => SignupScreen()),
                       );
                     },
                     child: Text(
@@ -83,9 +81,7 @@ class HomeScreen extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(
-                          builder: (context) => LoginScreen(),
-                        ),
+                        MaterialPageRoute(builder: (context) => LoginScreen()),
                       );
                     },
                     child: Text(
