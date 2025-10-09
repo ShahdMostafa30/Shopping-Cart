@@ -2,7 +2,8 @@
 
 This is a simple Flutter demo project that simulates a shopping application.  
 It focuses only on the **UI/UX flow**.  
-Users can explore screens like **Welcome, Sign Up / Sign In, and Shopping Home** with dummy products.
+Users can explore screens like **Welcome, Sign Up / Sign In, and Shopping Home** with dummy products.<br>
+This project is for Sprint x Microsoft Summer Camp.
 
 ---
 
@@ -52,17 +53,8 @@ It provides a clean structure to demonstrate how users move from authentication 
 ---
 ## 📸 Screenshots
 
-### Welcome Screen
-<img width="200" height="400" alt="image" src="https://github.com/user-attachments/assets/f9ba3622-2b7e-4abf-b828-d6307c4a8543" />
-
-### Sign up Screen
-<img width="200" height="400" alt="image" src="https://github.com/user-attachments/assets/ed8f08ea-8a39-419e-a637-bf318a6a8648" />
-
-### Sign in Screen
-<img width="200" height="400" alt="image" src="https://github.com/user-attachments/assets/8d6115c3-79cc-455a-8507-0bd35b0d1eb0" />
-
-### Success Dialog
-<img width="200" height="400" alt="image" src="https://github.com/user-attachments/assets/ea0d2e59-dca6-496e-9d91-de7900fb22c9" />
+### &nbsp;Welcome Screen &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sign up Screen &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sign in Screen &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Success Dialog
+<img width="200" height="400" alt="image" src="https://github.com/user-attachments/assets/f9ba3622-2b7e-4abf-b828-d6307c4a8543" /> <img width="200" height="400" alt="image" src="https://github.com/user-attachments/assets/ed8f08ea-8a39-419e-a637-bf318a6a8648" /> <img width="200" height="405" alt="image" src="https://github.com/user-attachments/assets/8d6115c3-79cc-455a-8507-0bd35b0d1eb0" /> <img width="200" height="400" alt="image" src="https://github.com/user-attachments/assets/ea0d2e59-dca6-496e-9d91-de7900fb22c9" />
 
 ### Shopping Screen
 <img width="200" height="400" alt="image" src="https://github.com/user-attachments/assets/03c668dd-a7c2-4185-9348-c084085d05b6" />
@@ -78,5 +70,3 @@ This is a dummy project with no backend or database connection.
 All products, offers, and validations are static/dummy data.
 
 Intended for learning Flutter UI & Navigation only.
-
-This project is for Sprint x Microsoft Summer Camp.
